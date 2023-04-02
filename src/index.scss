@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,500;1,900&family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;600&family=Roboto+Mono:wght@100;400;500;600&family=Rubik:ital,wght@0,300;0,600;1,300;1,400&display=swap');
+
+@import 'config';
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: $primary-color;
+  color: #ccc;
+  font-style: italic;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #ccc;
+}
+
+//navbar styles
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  ul{
+    display: flex;
+    align-items: center;
+    
+    li{
+      margin: 0 20px;
+    }
+    li::after{
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #ccc;
+      transition: width 400ms ease-in;
+    }
+    li:hover::after{
+      width: 100%;
+    }
+  }
+  h1{
+    font-size: $primary-text-size;
+  }
+}
+
+//footer styles
+footer{
+  text-align: center;
+  background: $secondary-color;
+  padding: 20px;
+  font-size: $secondary-text-size;
+}
+
+//home pagestyles
+.home-page{
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 50px auto;
+
+  .content{
+    margin-top: 30px;
+    padding: 20px 20px;
+    background: $secondary-color;
+    border: none;
+    border-radius: 8px;
+  }
+}
+
+//contact page styles
+.contact-page{
+  height: 100vh;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+//about page styles
+.about-page{
+  height: 100vh;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+
